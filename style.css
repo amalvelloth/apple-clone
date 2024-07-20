@@ -158,6 +158,20 @@ ul {
   border-radius: 2rem;
 }
 
+.carousel-item img {
+    height: 100vh; /* change the height to your desired value */
+    object-fit: contain; /* optional, to maintain image aspect ratio */
+
+  }
+
+  .carousel-item {
+    -webkit-backface-visibility: hidden; 
+    backface-visibility: hidden; 
+    transition: -webkit-transform 2s ease-in-out; 
+    transition: transform 2s ease-in-out; 
+    transition: transform 2s ease-in-out, -webkit-transform 1s ease-in-out 
+  } 
+ 
 /* responsive styles */
 
 @media (max-width: 768px) {
@@ -198,6 +212,10 @@ ul {
     .app-icon {
         margin: 6px;
     }
+    .carousel-item img {
+        height: 100%; /* change the height to your desired value */
+        object-fit: cover; /* optional, to maintain image aspect ratio */
+      }
 }
 
    
