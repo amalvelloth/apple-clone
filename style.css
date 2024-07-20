@@ -154,6 +154,7 @@ ul {
     justify-content: center;
     align-items: start;
     margin-top: -3rem;
+    overflow: hidden;
   }
   .nav-item {
     margin-right: 0;
