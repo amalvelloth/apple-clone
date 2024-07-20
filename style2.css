@@ -1,0 +1,150 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: 0;
+    font-family: "Roboto", sans-serif;
+  }
+  
+  nav {
+    background-color: #1a1a1a9f;
+    backdrop-filter: blur(25px);
+  }
+  
+  nav ul li {
+    display: flex;
+    list-style: none;
+    text-decoration: none;
+    font-size: 12px;
+  }
+  
+  nav ul {
+    margin: 0 auto;
+    max-width: 1050px;
+    color: #ababab;
+  }
+  
+  .nav-item {
+    text-decoration: none;
+    list-style: none;
+  }
+  .nav-item svg {
+    display: flex;
+    align-items: center;
+    list-style: none;
+  }
+  
+  .custom-collapse {
+      background-color: white;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+  }
+  
+  .navbar-toggler {
+      z-index: 1;
+  }
+  
+  #iPadpro-section {
+    position: relative;
+    background-color: black;
+    height: 77vh;
+    width: 100%;
+    overflow: hidden;
+  }
+  #iPadpro-section img {
+    bottom: -20rem;
+    width: 1120px;
+    z-index: 1;
+  }
+  .main-btn-1 {
+    padding: 0.6rem 1rem;
+    border-radius: 2rem;
+    background-color: #0071e3;
+    color: white;
+    font-weight: 600;
+    border: none;
+    outline: none;
+  }
+  .main-btn-2 {
+    padding: 0.6rem 1rem;
+    border-radius: 2rem;
+    background-color: black;
+    border: 1px #0071e3 solid;
+    color: white;
+    font-weight: 600;
+    outline: none;
+  }
+  
+  .main-text {
+    margin-top: 5rem;
+    z-index: 10;
+  }
+  .main-text h1 {
+    font-size: 54px;
+  }
+  
+  #mac-section {
+    height: 77vh;
+    width: 100%;
+    background-color: #e3e3e3;
+  }
+  #mac-section img {
+    width: 500px;
+  }
+  
+  #iPhone-section {
+    position: relative;
+    height: 77vh;
+    width: 100%;
+    background-color: black;
+    overflow: hidden;
+  }
+  #iPhone-section img {
+    width: 600px;
+    margin-top: 14rem;
+  }
+  
+  .button-container button {
+    background-color: white;
+    color: #007bff;
+    border: 1px solid #007bff;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 2rem;
+  }
+  
+  .main-text2 {
+    color: white;
+  }
+  
+  .gallery-text {
+    margin-top: 3rem;
+  }
+  .gallery-text-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 6px 20px;
+    cursor: pointer;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 2rem;
+  }
+  .gallery-text-btn2 {
+    background-color: #007bff;
+    color: white;
+    padding: 6px 20px;
+    cursor: pointer;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 2rem;
+  }
