@@ -8,7 +8,21 @@ nav {
 }
 
 .navbar-toggler {
-    font-size: 14.7px;
+  font-size: 14.7px;
+  border: none;
+  padding: 0;
+  text-decoration: none;
+}
+.navbar-toggler:focus,
+.navbar-toggler:active {
+    outline: none;
+    box-shadow: none;
+    padding: none;
+}
+
+
+.app-icon {
+    display: block;
 }
 
 ul {
@@ -85,7 +99,7 @@ ul {
 }
 
 #mac-section {
-  height: 80vh;
+  height: 85vh;
   width: 100%;
   background-color: #e3e3e3;
 }
@@ -153,17 +167,22 @@ ul {
     text-align: center;
     justify-content: center;
     align-items: start;
-    margin-top: -3rem;
+    margin-top: -1.3rem;
     overflow: hidden;
   }
+  .nav-item svg {
+    display: none;
+  }
+
   .nav-item {
     margin-right: 0;
-    margin-left: 2.5rem;
+    margin-left: 2.2rem;
   }
   .nav-link {
     font-size: 28px;
     font-weight: 500;
     color: black;
+    padding: 3px 0;
   }
 
   .nav-item svg {
@@ -173,5 +192,19 @@ ul {
   .navbar-toggler {
     z-index: 1050; /* Ensure it stays on top */
   }
+  
+}
+@media (max-width: 992px) {
+    .app-icon {
+        margin: 6px;
+    }
 }
 
+   
+
+@media (min-width: 992px) {
+    .app-icon {
+        display: none;
+    }
+    
+}
