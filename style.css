@@ -1,4 +1,10 @@
-/* navbar styles */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
 nav {
   display: flex;
   justify-content: center;
@@ -94,7 +100,11 @@ ul {
   z-index: 10;
 }
 .main-text h1 {
-  font-size: 54px;
+  font-size: 48px;
+}
+.main-text p {
+  font-size: 24px;
+  font-weight: 400;
 }
 
 #mac-section {
@@ -133,6 +143,12 @@ ul {
   color: white;
 }
 
+.card img {
+  width: 100%;
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Remove bottom whitespace */
+}
+
 .gallery-text {
   margin-top: 3rem;
 }
@@ -156,6 +172,41 @@ ul {
   font-weight: bold;
   border-radius: 2rem;
 }
+#gallery-section .custom-card {
+  height: 100%;
+  max-width: 100%; /* Ensure card does not exceed container width */
+}
+
+#gallery-section .custom-card img {
+  width: 100%; /* Make image take up full width of card */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Ensure image covers the card area */
+}
+
+#gallery-section .card-body {
+  padding: 1rem; /* Add padding to the card body */
+}
+#gallery-section .custom-card {
+  height: 100%;
+  max-width: 100%; /* Ensure card does not exceed container width */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#gallery-section .custom-card img {
+  max-width: 100%; /* Ensure image does not exceed card width */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Ensure image covers the card area */
+  display: block;
+  margin: 0 auto; /* Center image horizontally */
+}
+
+#gallery-section .card-body {
+  padding: 1rem; /* Add padding to the card body */
+}
+
 
 
 
@@ -172,7 +223,7 @@ ul {
 }
 
 .carousel-item img {
-  height: 100vh; /* change the height to your desired value */
+  height: 95vh; /* change the height to your desired value */
   object-fit: contain; /* optional, to maintain image aspect ratio */
 }
 
@@ -191,6 +242,13 @@ ul {
   transition: transform 2s ease-in-out;
   transition: transform 2s ease-in-out, -webkit-transform 1s ease-in-out;
 }
+.carousel-item button {
+  position: absolute;
+  bottom: 0;
+  left: 20px;
+  margin: 10px;
+}
+
 
 .scroll-item button {
   border-radius: 1.5rem;
@@ -221,7 +279,7 @@ ul {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  animation: scroll 30s linear infinite;
+  animation: scroll 20s linear infinite;
 }
 
 .scroll-item {
