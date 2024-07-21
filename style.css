@@ -316,9 +316,7 @@ ul {
     height: 100%; /* change the height to your desired value */
     object-fit: cover; /* optional, to maintain image aspect ratio */
   }
-  nav {
-    height: 48px;
-  }
+
 }
 
 @media (min-width: 992px) {
