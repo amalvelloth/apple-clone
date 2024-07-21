@@ -15,14 +15,13 @@ nav {
 }
 .navbar-toggler:focus,
 .navbar-toggler:active {
-    outline: none;
-    box-shadow: none;
-    padding: none;
+  outline: none;
+  box-shadow: none;
+  padding: none;
 }
 
-
 .app-icon {
-    display: block;
+  display: block;
 }
 
 ul {
@@ -158,20 +157,116 @@ ul {
   border-radius: 2rem;
 }
 
+
+
+.carousel-inner {
+  display: flex;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: transparent; /* Red color for the icons */
+  width: 20px;
+  height: 20px;
+  background-size: 100%, 100%;
+}
+
 .carousel-item img {
-    height: 100vh; /* change the height to your desired value */
-    object-fit: contain; /* optional, to maintain image aspect ratio */
+  height: 100vh; /* change the height to your desired value */
+  object-fit: contain; /* optional, to maintain image aspect ratio */
+}
 
+.carousel-indicators [data-bs-target] {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  transition: background-color 0.3s;
+}
+
+.carousel-item {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transition: -webkit-transform 2s ease-in-out;
+  transition: transform 2s ease-in-out;
+  transition: transform 2s ease-in-out, -webkit-transform 1s ease-in-out;
+}
+
+.scroll-item button {
+  border-radius: 1.5rem;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 16px;
+  opacity: 0;
+  transform: translateY(0);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.scroll-item:hover button {
+  opacity: 1;
+  transform: translateY(-10px);
+}
+
+.scroll-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  overflow: hidden;
+  width: 100%;
+  background: white;
+  height: 40vh;
+}
+
+.scroll-content {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  animation: scroll 30s linear infinite;
+}
+
+.scroll-item {
+  position: relative;
+}
+
+.scroll-item img {
+  height: 240px;
+  margin-right: 10px; /* Adjust the spacing as needed */
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.scroll-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0);
+  transition: background 0.3s ease;
+}
+
+.scroll-item:hover::before {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.scroll-item:hover img {
+  filter: brightness(0.7);
+  transform: scale(1.05);
+}
+
+.scroll-content:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
   }
+  100% {
+    transform: translateX(-50%);
+  }
+}
 
-  .carousel-item {
-    -webkit-backface-visibility: hidden; 
-    backface-visibility: hidden; 
-    transition: -webkit-transform 2s ease-in-out; 
-    transition: transform 2s ease-in-out; 
-    transition: transform 2s ease-in-out, -webkit-transform 1s ease-in-out 
-  } 
- 
 /* responsive styles */
 
 @media (max-width: 768px) {
@@ -206,23 +301,28 @@ ul {
   .navbar-toggler {
     z-index: 1050; /* Ensure it stays on top */
   }
-  
+
+  .scroll-item img {
+    height: 180px;
+    margin-right: 10px; /* Adjust the spacing as needed */
+    transition: transform 0.3s ease, filter 0.3s ease;
+  }
 }
 @media (max-width: 992px) {
-    .app-icon {
-        margin: 6px;
-    }
-    .carousel-item img {
-        height: 100%; /* change the height to your desired value */
-        object-fit: cover; /* optional, to maintain image aspect ratio */
-      }
+  .app-icon {
+    margin: 6px;
+  }
+  .carousel-item img {
+    height: 100%; /* change the height to your desired value */
+    object-fit: cover; /* optional, to maintain image aspect ratio */
+  }
+  nav {
+    height: 48px;
+  }
 }
 
-   
-
 @media (min-width: 992px) {
-    .app-icon {
-        display: none;
-    }
-    
+  .app-icon {
+    display: none;
+  }
 }
