@@ -12,7 +12,9 @@ nav {
   background-color: #181818c4;
   backdrop-filter: blur(20px);
 }
-
+.nav-link .logo {
+  top: 10px;
+}
 .navbar-toggler {
   border-color: rgba(255, 255, 255, 0.1);
 }
@@ -372,6 +374,24 @@ video {
   animation-play-state: paused;
 }
 
+.stream-now-btn {
+  position: absolute;
+  background-color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 1.5rem;
+  font-size: 16px;
+}
+
+
+
+
+
+
+
+
+
+
 @keyframes scroll {
   0% {
     transform: translateX(0);
@@ -449,11 +469,25 @@ video {
     height: 100%; /* change the height to your desired value */
     object-fit: cover; /* optional, to maintain image aspect ratio */
   }
+  .mob-bag-icon {
+    position: fixed;
+    right: 60px;
+  }
+  .mob-search-icon {
+    position: fixed;
+    right: 110px;
+  }
 
 }
 
 @media (min-width: 992px) {
   .app-icon {
+    display: none;
+  }
+  .mob-bag-icon {
+    display: none;
+  }
+  .mob-search-icon {
     display: none;
   }
 }
