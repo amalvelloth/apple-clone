@@ -9,8 +9,15 @@ nav {
   display: flex;
   justify-content: center;
   position: relative;
-  background-color: #ffffffc4;
+  background-color: #181818c4;
   backdrop-filter: blur(20px);
+}
+.navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28255, 255, 255, 1%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
 
 .navbar-toggler {
@@ -48,6 +55,7 @@ ul {
   text-decoration: none;
   transition: color 0.2s ease;
   font-size: 13px;
+  color: rgb(193, 193, 193);
 }
 
 .nav-link:hover {
@@ -64,20 +72,53 @@ ul {
   list-style: none;
 }
 
-#iPadpro-section {
+video {
+  padding-top: 2.7rem;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin: 0 auto;
+  display: block;
+}
+#Visionpro-section {
   position: relative;
   background-color: black;
-  height: 77vh;
+  height: 100vh;
   width: 100%;
   overflow: hidden;
 }
-#iPadpro-section img {
+#Visionpro-section img {
   bottom: -20rem;
   width: 1120px;
   z-index: 1;
 }
+#Visionpro-section .main-btn-2 {
+  background-color: transparent;
+  font-weight: 400;
+  border-color: white;
+  margin-top: 15px;
+  margin-left: 13px;
+}
+#Visionpro-section .main-btn-2:hover {
+  background-color: white;
+  color: black;
+}
+
+#Visionpro-section .main-btn-1 {
+  color: black;
+  background-color: white;
+  font-weight: 400;
+  margin-top: 15px;
+}
+
+#Visionpro-section .main-text {
+  position: absolute;
+  bottom: 3rem;
+  margin: 0;
+}
+
 .main-btn-1 {
-  padding: 0.6rem 1rem;
+  padding: 0.6rem 1.5rem;
   border-radius: 2rem;
   background-color: #0071e3;
   color: white;
@@ -86,13 +127,16 @@ ul {
   outline: none;
 }
 .main-btn-2 {
-  padding: 0.6rem 1rem;
+  padding: 0.6rem 1.5rem;
   border-radius: 2rem;
   background-color: black;
   border: 1px #0071e3 solid;
   color: white;
   font-weight: 600;
   outline: none;
+}
+.main-btn-2:hover {
+  background-color: #0071e3;
 }
 
 .main-text {
@@ -108,9 +152,11 @@ ul {
 }
 
 #mac-section {
-  height: 85vh;
+  height: 88vh;
   width: 100%;
   background-color: #e3e3e3;
+  border-top: 12px solid white;
+  border-bottom: 12px solid white;
 }
 #mac-section img {
   width: 500px;
@@ -137,6 +183,11 @@ ul {
   font-size: 16px;
   font-weight: bold;
   border-radius: 2rem;
+  background-color: #E3E3E3;
+}
+.button-container button:hover {
+  background-color: #007bff;
+  color: white;
 }
 
 .main-text2 {
@@ -152,26 +203,7 @@ ul {
 .gallery-text {
   margin-top: 3rem;
 }
-.gallery-text-btn {
-  background-color: #007bff;
-  color: white;
-  padding: 6px 20px;
-  cursor: pointer;
-  border: none;
-  font-size: 16px;
-  font-weight: bold;
-  border-radius: 2rem;
-}
-.gallery-text-btn2 {
-  background-color: #007bff;
-  color: white;
-  padding: 6px 20px;
-  cursor: pointer;
-  border: none;
-  font-size: 16px;
-  font-weight: bold;
-  border-radius: 2rem;
-}
+
 #gallery-section .custom-card {
   height: 100%;
   max-width: 100%; /* Ensure card does not exceed container width */
@@ -205,6 +237,29 @@ ul {
 
 #gallery-section .card-body {
   padding: 1rem; /* Add padding to the card body */
+}
+
+.gallery-btn1 {
+  padding: 0.6rem 1.5rem;
+  border-radius: 2rem;
+  background-color: #0071e3;
+  color: white;
+  font-weight: 400;
+  border: none;
+  outline: none;
+  text-decoration: none;
+}
+.gallery-btn2 {
+  padding: 0.6rem 1.5rem;
+  border-radius: 2rem;
+  background-color: transparent;
+  color: #007bff;
+  margin: 15px 0 0 13px;
+  font-weight: 400;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  border: 1px solid #007bff;
 }
 
 
@@ -330,12 +385,13 @@ ul {
 @media (max-width: 768px) {
   .navbar-nav {
     height: 100vh;
+    margin-top: -3rem;
     display: flex;
     text-align: center;
     justify-content: center;
     align-items: start;
-    margin-top: -1.3rem;
     overflow: hidden;
+    padding-bottom: 5rem;
   }
   .nav-item svg {
     display: none;
@@ -348,7 +404,7 @@ ul {
   .nav-link {
     font-size: 28px;
     font-weight: 500;
-    color: black;
+    color: white;
     padding: 3px 0;
   }
 
@@ -365,10 +421,28 @@ ul {
     margin-right: 10px; /* Adjust the spacing as needed */
     transition: transform 0.3s ease, filter 0.3s ease;
   }
+  video {
+    padding-top: 3.2rem;
+  }
+  #Visionpro-section {
+    height: 78vh;
+  }
+  #mac-section {
+    height: 73vh;
+  }
 }
+@media (min-width: 768px) {
+  nav {
+    height: 44px;
+  }
+}
+
+
+
 @media (max-width: 992px) {
   .app-icon {
-    margin: 6px;
+    margin: 8px;
+    padding: 1px;
   }
   .carousel-item img {
     height: 100%; /* change the height to your desired value */
